@@ -1,14 +1,18 @@
+import { Routes,Route } from "react-router-dom"
 import MainLayout  from "./layouts/MainLayout"
+import Home from "./pages/Home"
+import Product from "./pages/Product"
 function App() {
   
 
   return (
     <>
-      <MainLayout className="bg-gray-100 min-h-screen">
-        <main>
-         Main content goes here
-        </main>
-      </MainLayout>
+        <Routes>
+          <Route path="/" element={<MainLayout/>}>
+            <Route index element={<Home />} />
+            <Route path="/product" element={<Product />} />
+          </Route>
+        </Routes>
     </>
   )
 }
