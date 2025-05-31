@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <MainLayout>
+      <MainLayout className="bg-gray-100 min-h-screen">
         <main>
          Main content goes here
         </main>
