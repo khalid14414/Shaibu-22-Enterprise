@@ -34,7 +34,7 @@ function Navbar() {
                 <nav className="hidden md:flex space-x-6 items-center">
                     {navLinks.map((links => (
                         
-                        <Link key={links.name} to={links.path} className={`${isActive(links.path)?"text-green-600 font-semibold":"text-gray-700"} text-gray-700 hover:text-green-500 transition duration-200`}>
+                        <Link key={links.name} to={links.path} className={`${isActive(links.path)?"text-green-600 font-semibold":"text-gray-700"} font-body text-gray-700 hover:text-green-500 transition duration-200`}>
                             {links.name}</Link>
                     )))}
                     <Link to="contact" className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition">Shop Now</Link>

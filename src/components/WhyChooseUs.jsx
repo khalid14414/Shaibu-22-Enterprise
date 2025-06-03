@@ -32,16 +32,16 @@ function WhyChooseUs() {
   return (
     <section className="bg-white py-16" id="why-choose-us" >
        <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">Why Choose Shaibu 22 Enterprise?</h2>
-        <p className="text-gray-gray-600 max-w-2xl mx-auto mb-12"> We're committed to creating a healthier, safer, and more natural way to protect your loved ones</p>
+        <h2 className="text-3xl font-heading md:text-4xl font-bold text-green-800 mb-4">Why Choose Shaibu 22 Enterprise?</h2>
+        <p className="text-gray-gray-600 font-body max-w-2xl mx-auto mb-12"> We're committed to creating a healthier, safer, and more natural way to protect your loved ones</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 s sm:mx-10 md:mx-10">
             {feautures.map((feature, index) => (
                 <div key={index} className="bg-green-50  p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
                     <div className="flex items-center justify-center mb-4">
                         {feature.icons}
                     </div>
-                    <h3 className="text-xl font-semibold text-green-700 mb-2">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <h3 className="text-xl font-heading font-semibold text-green-700 mb-2">{feature.title}</h3>
+                    <p className="text-gray-600 font-body">{feature.description}</p>
                 </div>
             ))}
         </div>
