@@ -1,3 +1,4 @@
+import heroImage from '../assets/imfdinadfsn.jpg'
 function Hero() {
     const link = "bg-green-500 py-4";
 
@@ -20,6 +21,10 @@ function Hero() {
                             <button className="px-6 py-3 bg-white text-gray-700 border border-green-700 rounded-xl hover:bg-green-100 transition duration-300">Learn More</button>
                         </a>
                     </div>
+                </div>
+                <div className="flex justify-center md:justify-end">
+                    <img src={heroImage} alt="Bliss Organic Mosquito" className='w-full h-auto max-w-md rounded-lg shadow-lg'  
+                    loading="lazy" />
                 </div>
             </div>
         </section>
