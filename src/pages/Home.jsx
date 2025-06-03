@@ -1,3 +1,4 @@
+import CallToAction from "../components/CallToAction";
 import Hero from "../components/Hero";
 import ProductFeature from "../components/ProductFeature";
 import WhyChooseUs from "../components/WhyChooseUs";
@@ -8,7 +9,9 @@ function Home(){
             <Hero />
             <WhyChooseUs />
             <ProductFeature />
-            <h1>Home!!!! Page</h1>
+
+            <CallToAction />
+            
         </div>
     )
 }
