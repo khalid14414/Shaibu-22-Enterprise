@@ -11,8 +11,8 @@ function Home(){
             <WhyChooseUs />
             <ProductFeature />
 
-            <CallToAction />
             <Testimonials />
+            <CallToAction />
             
         </div>
     )
