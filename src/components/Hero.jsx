@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
+import heroImage from '../assets/image.png'
 
 const HeroSection = () => {
   return (
     <section className="relative bg-gradient-to-br from-green-50 to-green-100 overflow-hidden">
-      {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 -left-20 w-72 h-72 rounded-full bg-green-200"></div>
         <div className="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-green-300"></div>
@@ -11,9 +11,9 @@ const HeroSection = () => {
       </div>
       
       <div className="container mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center relative z-10">
-        {/* Text Content */}
+       
         <div className="text-center md:text-left">
-          {/* Trust badge */}
+          
           <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-1 rounded-full mb-6 shadow-sm">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -21,19 +21,17 @@ const HeroSection = () => {
             <span className="text-sm font-medium">100% Natural & Organic</span>
           </div>
           
-          {/* Headline */}
+     
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
             <span className="block">Organic Mosquito Repellents</span>
             <span className="block text-green-700 mt-2">For a Healthier Life</span>
           </h1>
           
-          {/* Description */}
           <p className="text-lg md:text-xl text-gray-700 max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed">
             Protect your family naturally with our eco-friendly products made from 
             lemongrass, cloves, scent leaves, and scientifically proven ingredients.
           </p>
           
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
             <Link
               to="/products"
@@ -56,7 +54,6 @@ const HeroSection = () => {
             </Link>
           </div>
           
-          {/* Features */}
           <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-6">
             <div className="flex items-center">
               <div className="bg-green-100 p-2 rounded-full mr-3">
@@ -77,17 +74,17 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        
-        {/* Image */}
         <div className="relative">
           <div className="relative aspect-square bg-gradient-to-br from-green-200 to-green-300 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition duration-500">
             {/* Replace with actual product image */}
             <div className="absolute inset-0 flex items-center justify-center bg-gray-200 border-2 border-dashed rounded-xl w-full h-full">
-              <span className="text-gray-500">Product Image</span>
+               
+              <span className="text-gray-500"> <img 
+                    src={heroImage} 
+                    alt="Product" 
+                    className="object-cover w-full h-full rounded-lg shadow-lg" /></span>
             </div>
           </div>
-          
-          {/* Floating decorative elements */}
           <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-green-200 rounded-full z-0"></div>
           <div className="absolute -top-4 -right-4 w-16 h-16 bg-green-300 rounded-full z-0"></div>
         </div>

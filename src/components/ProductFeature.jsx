@@ -1,9 +1,9 @@
-import images from '../assets/imfdinadfsn.jpg'
+import heroImage from '../assets/image.png'
 const product=[
     {
         name: 'Bliss Mosquito Repellent',
         description: 'A 100% organic mosquito repellent made with natural ingredients to protect your family from mosquito-borne diseases without chemicals.',
-        image: {images},
+        image: {heroImage},
         features: ['Organic & Safe', 'Long-lasting Protection', 'Non-toxic Formula']
     },
     {

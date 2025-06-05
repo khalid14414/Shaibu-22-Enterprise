@@ -84,13 +84,12 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Contact */}
+          
           <div>
             <h3 className="text-xl font-bold mb-6 pb-2 border-b-2 border-green-700 inline-block">
               Contact Us
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-5">
               <li className="flex items-start">
                 <FaMapMarkerAlt className="text-green-400 mt-1 mr-3 flex-shrink-0" />
                 <span className="text-gray-300">
@@ -117,8 +116,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Newsletter */}
           <div>
             <h3 className="text-xl font-bold mb-6 pb-2 border-b-2 border-green-700 inline-block">
               Newsletter
@@ -145,8 +142,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Copyright section */}
       <div className="border-t border-green-800 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-center items-center">
@@ -156,8 +151,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      
-      {/* Decorative element */}
       <div className="w-full h-2 bg-gradient-to-r from-green-600 via-green-700 to-green-600"></div>
     </footer>
   );
