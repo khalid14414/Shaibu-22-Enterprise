@@ -36,7 +36,7 @@ function Navbar() {
                         <Link key={links.name} to={links.path} className={`${isActive(links.path)?"text-green-600 font-semibold":"text-gray-700"} font-body text-gray-700 hover:text-green-500 transition duration-200`}>
                             {links.name}</Link>
                     )))}
-                    <Link to="contact" className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition">Shop Now</Link>
+                    <Link to="product" className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition">Shop Now</Link>
                 </nav>
 
                 <button onClick={toggleMenu} className="md:hidden text-green-600 focus:outline-none" aria-label="Toggle menu">{menuOpen ? <X size={34} /> : <Menu size={34} />}</button>

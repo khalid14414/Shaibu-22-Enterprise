@@ -8,7 +8,6 @@ import {
   FaPhone,
   FaEnvelope,
   FaLeaf,
-  FaShieldAlt
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -77,7 +76,6 @@ const Footer = () => {
                     href={item.href} 
                     className="text-gray-300 hover:text-white flex items-center transition-all duration-300 group"
                   >
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {item.name}
                   </a>
                 </li>
