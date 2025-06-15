@@ -10,8 +10,6 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
     const location = useLocation();
 
-    console.log("Current location:", location);
-    // Check if the current path is the home page
     const isActive =(path)=>location.pathname === path 
     
     

@@ -1,25 +1,27 @@
 import heroImage from '../assets/image.png';
+import managingdir from '../assets/mg.jpg'
+import marketingdir from '../assets/gm.jpg'
 import { FaTwitter, FaLinkedinIn, FaInstagram, FaLeaf } from 'react-icons/fa';
 
 const teamMembers = [
 
   {
-    name: "Akosua Mensah",
-    role: "Product Manager",
-    image: heroImage,
+    name: "Shaibu Yahaya",
+    role: "Managing Director",
+    image: managingdir,
     bio: "Quality control specialist passionate about organic formulations",
     social: { twitter: "#", linkedin: "#", instagram: "#" }
   },
   {
-    name: "Kwame Boateng",
-    role: "Marketing Lead",
-    image: heroImage,
+    name: "Daniel Mansah Abotsi",
+    role: "Marketing Manager",
+    image: marketingdir,
     bio: "Digital marketing strategist focused on health education",
     social: { linkedin: "#", instagram: "#" }
   },
   {
-    name: "Esi Serwaa",
-    role: "Sales Coordinator",
+    name: "Kojo Nanny Terra",
+    role: "General Manager",
     image: heroImage,
     bio: "Customer relations expert with community outreach experience",
     social: { twitter: "#", instagram: "#" }
@@ -57,13 +59,13 @@ const TeamSection = () => {
               className="group bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-500 hover:shadow-2xl"
             >
               {/* Image with overlay */}
-              <div className="relative h-80 overflow-hidden">
+              <div className="relative h-54 overflow-hidden">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-52 h-52 object-cover mx-auto rounded-full transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-70"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-green-900 to-transparent opacity-70"></div> */}
                 
                 {/* Social links */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
