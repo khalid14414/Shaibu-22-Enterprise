@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import heroImage from '../assets/image.png'
+import heroImage from '../assets/HeroImage3.png'
 
 const HeroSection = () => {
   return (
@@ -34,7 +34,7 @@ const HeroSection = () => {
           
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
             <Link
-              to="/products"
+              to="/product"
               className="bg-green-700 hover:bg-green-800 text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus:ring-4 focus:ring-green-300 focus:ring-opacity-50 flex items-center justify-center gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

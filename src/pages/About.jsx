@@ -1,5 +1,5 @@
 import OurStory from "../components/OurStory";
-import heroImage from '../assets/image.png'
+import heroImage from '../assets/mg.jpg'
 import TeamSection from "../components/TeamSection";
 
 function About() {

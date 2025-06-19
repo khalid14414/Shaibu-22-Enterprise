@@ -18,10 +18,10 @@ function Navbar() {
     };
     const navLinks = [
         { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
         { name: "Product", path: "/product" },
         { name: "Contact", path: "/contact" },
         { name: "Blog", path: "/blog" },
-        { name: "About", path: "/about" }
     ];
 
     return (

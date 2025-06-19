@@ -22,7 +22,7 @@ const teamMembers = [
   {
     name: "Kojo Nanny Terra",
     role: "General Manager",
-    image: heroImage,
+    image: managingdir,
     bio: "Customer relations expert with community outreach experience",
     social: { twitter: "#", instagram: "#" }
   },
