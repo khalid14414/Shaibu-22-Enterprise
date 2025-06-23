@@ -5,7 +5,7 @@ const blogData = [
     id: 1,
     title: "Why Organic Mosquito Repellent is Better",
     body: "Discover the benefits of using natural ingredients like lemongrass and cloves to protect your family from mosquito-borne diseases.",
-    image: "https://source.unsplash.com/400x200/?nature,herbal,leaves",
+    image: "https://images.unsplash.com/photo-1683483590056-0f7024f4b342?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
