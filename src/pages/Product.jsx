@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { FaShoppingCart, FaStar, FaLeaf } from 'react-icons/fa';
+import Bliss from '../assets/Bliss2.png'; 
+import product1 from '../assets/product1.jpg'; 
+import product2 from '../assets/product2.jpg'; 
+import product3 from '../assets/product.jpg'; 
 
 const ProductPage = () => {
   
@@ -11,7 +15,7 @@ const ProductPage = () => {
       price: "₵ 25.00",
       features: ["DEET-free", "Long-lasting", "Eco-friendly"],
       rating: 4.8,
-      image: "/path/to/repellent.jpg"
+      image: Bliss
     },
     {
       id: 2,
@@ -20,7 +24,7 @@ const ProductPage = () => {
       price: "₵ 18.00",
       features: ["Caffeine-free", "Antioxidants", "Digestive aid",],
       rating: 4.7,
-      image: "/path/to/tea.jpg"
+      image: Bliss
     },
     {
       id: 3,
@@ -30,7 +34,7 @@ const ProductPage = () => {
       features: ["Best value", "Complementary products"],
       category: "bundle",
       rating: 4.9,
-      image: "/path/to/bundle.jpg"
+      image: product1
     },
     {
       id: 4,
@@ -39,7 +43,7 @@ const ProductPage = () => {
       price: "₵ 18.00",
       features: ["Cost-effective", "Same protection", "Easy refill"],
       rating: 4.6,
-      image: "/path/to/refill.jpg"
+      image: product2
     },
     {
       id: 5,
@@ -48,7 +52,7 @@ const ProductPage = () => {
       price: "₵ 30.00",
       features: ["Portable", "TSA-approved", "2-month supply"],
       rating: 4.7,
-      image: "/path/to/travel-kit.jpg"
+      image: product3
     },
     {
       id: 6,
@@ -57,7 +61,7 @@ const ProductPage = () => {
       price: "₵ 22.00",
       features: ["4 flavors", "Discover favorites", "Gift option"],
       rating: 4.8,
-      image: "/path/to/sampler.jpg"
+      image: Bliss
     }
   ];
   return (
@@ -88,9 +92,12 @@ const ProductPage = () => {
               className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group"
             >
               {/* Product Image */}
-              <div className="relative h-60 overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
                 <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center text-gray-500">
-                  Product Image
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover mx-auto transition-transform duration-500 group-hover:scale-110"/>
                 </div>
                 <div className="absolute top-4 right-4 flex items-center bg-white px-3 py-1 rounded-full shadow">
                   <FaStar className="text-yellow-400 mr-1" />

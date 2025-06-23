@@ -5,6 +5,7 @@ import Product from "./pages/Product"
 import About from "./pages/About"
 import Page404 from "./pages/Page404"
 import ContactPage from "./pages/Contact"
+import BlogPage from "./pages/BlogPage"
 function App() {
   
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/product" element={<Product />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<BlogPage />} />
           </Route>
             <Route path="*" element={<Page404 />} />
         </Routes>

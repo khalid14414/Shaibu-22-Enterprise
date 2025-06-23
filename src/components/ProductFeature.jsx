@@ -1,5 +1,5 @@
 
-import heroImage from '../assets/image.png'
+import heroImage from '../assets/Bliss.png'
 
 const products = [
     {
