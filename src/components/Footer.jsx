@@ -1,4 +1,3 @@
-
 import {
   FaFacebookF,
   FaInstagram,
@@ -10,6 +9,7 @@ import {
   FaLeaf,
 } from "react-icons/fa";
 
+
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-green-900 to-green-950 text-white">
@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="">
             <div className="flex items-center mb-6">
               <FaLeaf className="text-green-400 text-3xl mr-2" />
-              <span className="text-2xl font-bold tracking-wide">BLISS REPELLENT</span>
+              <span className="text-2xl font-bold tracking-wide">Shaibu Enterprise</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Shaibu 22 Enterprise is committed to reducing malaria through safe,
@@ -29,7 +29,8 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.facebook.com/profile.php?id=100093590842149"
+                target="_blank"
                 className="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1"
                 aria-label="Facebook"
               >
@@ -37,6 +38,7 @@ const Footer = () => {
               </a>
               <a 
                 href="#" 
+                target="_blank"
                 className="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1"
                 aria-label="Instagram"
               >
@@ -44,6 +46,7 @@ const Footer = () => {
               </a>
               <a 
                 href="#" 
+                target="_blank"
                 className="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1"
                 aria-label="Twitter"
               >
@@ -51,6 +54,7 @@ const Footer = () => {
               </a>
               <a 
                 href="#" 
+                target="_blank"
                 className="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1"
                 aria-label="LinkedIn"
               >
@@ -68,7 +72,7 @@ const Footer = () => {
               {[
                 { name: "Home", href: "/" },
                 { name: "About Us", href: "/about" },
-                { name: "Products", href: "/products" },
+                { name: "Product", href: "/product" },
                 { name: "Contact", href: "/contact" }
               ].map((item, index) => (
                 <li key={index}>

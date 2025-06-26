@@ -27,7 +27,7 @@ const CallToAction = () => {
           </Link>
           
           <Link
-            to="/partner"
+            to="/contact"
             className="bg-transparent border-2 border-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-green-700 transition-colors duration-300 focus:ring-4 focus:ring-white focus:ring-opacity-50"
           >
             <span className="flex items-center justify-center gap-2">

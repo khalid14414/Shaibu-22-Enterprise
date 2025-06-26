@@ -26,7 +26,7 @@ const BlogPage = () => {
                 title={blog.title}
                 body={blog.body}
                 image={blog.image}
-                onReadMore={()=>handleReadMore(post)}
+                onReadMore={()=>handleReadMore(blog)}
                 />
 
             ))}
@@ -38,14 +38,14 @@ const BlogPage = () => {
           <div className="bg-white max-w-2xl w-full rounded-xl shadow-xl p-6 relative animate-fade-in">
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-gray-600 hover:text-black text-xl"
+              className="absolute top-4 right-4  text-gray-600 hover:text-black text-4xl"
             >
               &times;
             </button>
             <img
               src={selectedPost.image}
               alt={selectedPost.title}
-              className="w-full h-56 object-cover rounded-md mb-4"
+              className="w-full h-80 object-cover rounded-md mb-4 px-10"
             />
             <h3 className="text-2xl font-bold text-green-800 mb-2">
               {selectedPost.title}
