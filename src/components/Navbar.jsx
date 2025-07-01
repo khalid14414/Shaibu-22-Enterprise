@@ -32,6 +32,7 @@ function Navbar() {
         { name: "About", path: "/about" },
         { name: "Products", path: "/product" },
         { name: "Blog", path: "/blog" },
+        { name: "Cart", path: "/cart" },
         { name: "Contact", path: "/contact" },
     ];
     return (

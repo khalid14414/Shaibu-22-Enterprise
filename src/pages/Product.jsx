@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
 import { FaShoppingCart, FaStar, FaLeaf } from 'react-icons/fa';
 import Bliss from '../assets/Bliss2.png'; 
 import product1 from '../assets/product1.jpg'; 
 import product2 from '../assets/product2.jpg'; 
 import product3 from '../assets/product.jpg'; 
+import { useCart } from '../../context/CartContext';
 
+import { formatPrice } from '../../context/formatPrice';
 const ProductPage = () => {
-  
+  const { addToCart } = useCart();
+
   const products = [
     {
       id: 1,
       name: "Bliss Mosquito Repellent",
       description: "Natural protection against mosquitoes with 8-hour effectiveness. Safe for children.",
-      price: "₵ 25.00",
+      price: 25.00,
       features: ["DEET-free", "Long-lasting", "Eco-friendly"],
       rating: 4.8,
       image: Bliss
@@ -21,7 +23,7 @@ const ProductPage = () => {
       id: 2,
       name: "Bliss Therapeutic Tea Leaves",
       description: "Relaxing blend of lemongrass, ginger, and cloves for immune support and wellness.",
-      price: "₵ 18.00",
+      price: 18.00,
       features: ["Caffeine-free", "Antioxidants", "Digestive aid",],
       rating: 4.7,
       image: Bliss
@@ -30,7 +32,7 @@ const ProductPage = () => {
       id: 3,
       name: "Repellent + Tea Bundle",
       description: "Complete wellness package with mosquito protection and therapeutic tea.",
-      price: "₵ 40.00",
+      price: 40.00,
       features: ["Best value", "Complementary products"],
       category: "bundle",
       rating: 4.9,
@@ -40,7 +42,7 @@ const ProductPage = () => {
       id: 4,
       name: "Bliss Repellent Refill Pack",
       description: "Economical refill for your Bliss Repellent dispenser.",
-      price: "₵ 18.00",
+      price: 18.00,
       features: ["Cost-effective", "Same protection", "Easy refill"],
       rating: 4.6,
       image: product2
@@ -49,7 +51,7 @@ const ProductPage = () => {
       id: 5,
       name: "Bliss Travel Kit",
       description: "Compact protection for on-the-go use. Perfect for travel and outdoor activities.",
-      price: "₵ 30.00",
+      price: 30.00,
       features: ["Portable", "TSA-approved", "2-month supply"],
       rating: 4.7,
       image: product3
@@ -58,7 +60,7 @@ const ProductPage = () => {
       id: 6,
       name: "Bliss Tea Sampler",
       description: "Experience all our therapeutic tea blends in one package.",
-      price: "₵ 22.00",
+      price: 22.00,
       features: ["4 flavors", "Discover favorites", "Gift option"],
       rating: 4.8,
       image: Bliss
@@ -110,7 +112,7 @@ const ProductPage = () => {
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h3 className="text-xl font-bold text-green-900 mb-1">{product.name}</h3>
-                    <div className="text-green-700 font-semibold">{product.price}</div>
+                    <div className="text-green-700 font-semibold"> {formatPrice(product.price)}</div>
                   </div>
                   <div className="bg-green-100 p-2 rounded-full">
                     <FaLeaf className="text-green-700" />
@@ -133,7 +135,7 @@ const ProductPage = () => {
                 
                 {/* Actions */}
                 <div className="grid grid-cols-2 gap-3">
-                  <button className="bg-green-700 hover:bg-green-800 text-white font-medium py-3 px-4 rounded-lg shadow transition-colors duration-300 flex items-center justify-center">
+                  <button className="bg-green-700 hover:bg-green-800 text-white font-medium py-3 px-4 rounded-lg shadow transition-colors duration-300 flex items-center justify-center" onClick={() => addToCart(product) }>
                     <FaShoppingCart className="mr-2" />
                     Add to Cart
                   </button>
