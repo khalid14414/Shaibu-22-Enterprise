@@ -30,7 +30,7 @@ export const CartProvider=({children})=>{
        }else{
            setCartItems((prevItems)=>[...prevItems,{...product, quantity: 1}]);
        }
-         // Optionally, you can show a notification or toast here
+         // You can show a notification or toast here
          toast.success(`${product.name} added to cart!`);
     }
 

@@ -1,6 +1,6 @@
-import { ImOpt } from "react-icons/im";
 import { useCart } from "../../context/CartContext";
 import { formatPrice } from "../../context/formatPrice";
+import CheckoutButton from "../components/CheckoutButton";
 
 
 const CartPage = () => {
@@ -11,7 +11,7 @@ const CartPage = () => {
       
 
   return (
-     <section className="max-w-5xl mx-auto py-12 px-4">
+     <section className="space-x-5 max-w-5xl mx-auto py-12 px-4">
       <h2 className="text-3xl font-bold text-green-800 mb-6">Your Cart</h2>
 
       {cartItems.length === 0 ? (
@@ -68,6 +68,7 @@ const CartPage = () => {
             <p className="text-xl font-bold text-green-700">
               Total:  {formatPrice(total)}
             </p>
+            <CheckoutButton cartItems={cartItems} total={total} />
           </div>
         </>
       )}
