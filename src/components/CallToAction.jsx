@@ -15,7 +15,7 @@ const CallToAction = () => {
         
         <div className="flex flex-col md:flex-row justify-center gap-6">
           <Link
-            to="/shop"
+            to="/product"
             className="bg-white text-green-700 px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 focus:ring-4 focus:ring-green-400 focus:ring-opacity-50"
           >
             <span className="flex items-center justify-center gap-2">
