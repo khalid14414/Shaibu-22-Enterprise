@@ -1,6 +1,7 @@
 import { useCart } from "../../context/CartContext";
 import { useState } from "react";
 import { FaLock, FaSpinner, FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutButton = ({ cartItems, total }) => {
   const { clearCart } = useCart();
@@ -15,6 +16,8 @@ const CheckoutButton = ({ cartItems, total }) => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -115,10 +118,9 @@ const CheckoutButton = ({ cartItems, total }) => {
           localStorage.setItem("orderReceipt", JSON.stringify(orderReceipt));
           clearCart();
           setIsSuccess(true);
-          
           // Redirect after a brief success display
           setTimeout(() => {
-            window.location.href = `/thank-you`;
+            navigate('/thank-you');
           }, 2000);
         },
         onClose: function () {
