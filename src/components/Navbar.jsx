@@ -1,9 +1,15 @@
+import { useCart } from "../../context/CartContext";
 import { useLocation, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { FaShoppingCart } from "react-icons/fa";
 
 
 function Navbar() {
+
+    const { cartItems } = useCart();
+    const cartCount = cartItems.length;
+
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
@@ -32,14 +38,13 @@ function Navbar() {
         { name: "About", path: "/about" },
         { name: "Products", path: "/product" },
         { name: "Blog", path: "/blog" },
-        { name: "Cart", path: "/cart" },
         { name: "Contact", path: "/contact" },
     ];
     return (
         <header
             className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled
-                    ? "bg-white/90 backdrop-blur-md shadow-md py-4"
-                    : "bg-white py-3"
+                ? "bg-white/90 backdrop-blur-md shadow-md py-4"
+                : "bg-white py-3"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,8 +71,8 @@ function Navbar() {
                                 key={link.name}
                                 to={link.path}
                                 className={`px-4 py-2 rounded-lg transition-all duration-200 ${isActive(link.path)
-                                        ? "text-green-700 font-semibold"
-                                        : "text-gray-600 hover:text-green-600 hover:bg-green-50"
+                                    ? "text-green-700 font-semibold"
+                                    : "text-gray-600 hover:text-green-600 hover:bg-green-50"
                                     }`}
                             >
                                 {link.name}
@@ -87,9 +92,18 @@ function Navbar() {
                                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                             </svg>
                         </Link>
+                        <Link to="/cart" className="relative flex items-center text-green-800 hover:text-green-600 border px-2 py-2 rounded-full font-medium">
+                            <FaShoppingCart size={30} />
+                            {cartCount > 0 && (
+                                <span className="absolute -top-2 -right-2 bg-red-700 text-white text-xs rounded-full px-1.5 py-0.5">
+                                    {cartCount}
+                                </span>
+                            )}
+                        </Link>
                     </nav>
 
                     {/* Mobile Menu Button */}
+                    
                     <button
                         onClick={toggleMenu}
                         className="md:hidden text-green-700 focus:outline-none"
@@ -101,6 +115,7 @@ function Navbar() {
                             <Menu size={34} className="text-green-800" />
                         )}
                     </button>
+                    
                 </div>
             </div>
 
@@ -131,6 +146,9 @@ function Navbar() {
                                     <span className="text-lg font-bold text-green-600">Repellent</span>
                                 </div>
                             </Link>
+                            <div>
+                                
+                            </div>
                             <button
                                 onClick={() => setMenuOpen(false)}
                                 className="text-gray-500 hover:text-gray-700"
@@ -147,8 +165,8 @@ function Navbar() {
                                     to={link.path}
                                     onClick={() => setMenuOpen(false)}
                                     className={`block px-4 py-3 rounded-lg transition-all ${isActive(link.path)
-                                            ? "bg-green-600 text-white font-medium"
-                                            : "text-gray-700 hover:bg-green-50"
+                                        ? "bg-green-600 text-white font-medium"
+                                        : "text-gray-700 hover:bg-green-50"
                                         }`}
                                 >
                                     {link.name}
@@ -167,6 +185,7 @@ function Navbar() {
                             </Link>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </header>

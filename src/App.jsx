@@ -7,6 +7,7 @@ import Page404 from "./pages/Page404"
 import ContactPage from "./pages/Contact"
 import BlogPage from "./pages/BlogPage"
 import CartPage from "./pages/CartPage"
+import ThankYou from "./pages/ThankYou"
 function App() {
   
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/thank-you" element={<ThankYou />} />
           </Route>
             <Route path="*" element={<Page404 />} />
         </Routes>
