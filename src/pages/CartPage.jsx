@@ -106,7 +106,6 @@ const CartPage = () => {
                       <div className="md:hidden text-xs text-gray-500 mb-1">Price</div>
                       <p className="text-green-700 font-medium text-center">{formatPrice(item.price)}</p>
                     </div>
-
                     {/* Quantity */}
                     <div className="col-span-2">
                       <div className="md:hidden text-xs text-gray-500 mb-1">Quantity</div>

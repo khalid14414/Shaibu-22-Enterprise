@@ -79,6 +79,17 @@ function Navbar() {
                             </Link>
                         ))}
                         <Link
+                            to="/cart"
+                            className="relative ml-2 flex items-center justify-center w-10 h-10 text-green-800 hover:text-green-600 rounded-full hover:bg-green-50 transition-colors"
+                        >
+                            <FaShoppingCart size={24} />
+                            {cartCount > 0 && (
+                                <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                                    {cartCount}
+                                </span>
+                            )}
+                        </Link>
+                        <Link
                             to="/product"
                             className="ml-4 bg-gradient-to-r from-green-600 to-green-700 text-white px-5 py-2.5 rounded-full font-medium shadow-md hover:shadow-lg hover:from-green-700 hover:to-green-800 transition-all duration-300 flex items-center"
                         >
@@ -92,30 +103,35 @@ function Navbar() {
                                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                             </svg>
                         </Link>
-                        <Link to="/cart" className="relative flex items-center text-green-800 hover:text-green-600 border px-2 py-2 rounded-full font-medium">
-                            <FaShoppingCart size={30} />
+                    </nav>
+
+                    {/* Mobile Menu Button */}
+
+                    <div className="md:hidden flex items-center gap-4">
+                        <Link
+                            to="/cart"
+                            className="relative flex items-center justify-center w-10 h-10 text-green-800 hover:text-green-600 rounded-full hover:bg-green-50 transition-colors"
+                        >
+                            <FaShoppingCart size={24} />
                             {cartCount > 0 && (
-                                <span className="absolute -top-2 -right-2 bg-red-700 text-white text-xs rounded-full px-1.5 py-0.5">
+                                <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                                     {cartCount}
                                 </span>
                             )}
                         </Link>
-                    </nav>
 
-                    {/* Mobile Menu Button */}
-                    
-                    <button
-                        onClick={toggleMenu}
-                        className="md:hidden text-green-700 focus:outline-none"
-                        aria-label="Toggle menu"
-                    >
-                        {menuOpen ? (
-                            <X size={34} className="text-green-800" />
-                        ) : (
-                            <Menu size={34} className="text-green-800" />
-                        )}
-                    </button>
-                    
+                        <button
+                            onClick={toggleMenu}
+                            className="text-green-700 focus:outline-none"
+                            aria-label="Toggle menu"
+                        >
+                            {menuOpen ? (
+                                <X size={30} className="text-green-800" />
+                            ) : (
+                                <Menu size={30} className="text-green-800" />
+                            )}
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -147,7 +163,7 @@ function Navbar() {
                                 </div>
                             </Link>
                             <div>
-                                
+
                             </div>
                             <button
                                 onClick={() => setMenuOpen(false)}
@@ -185,7 +201,6 @@ function Navbar() {
                             </Link>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </header>
