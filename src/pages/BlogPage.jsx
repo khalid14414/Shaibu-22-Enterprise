@@ -2,38 +2,38 @@ import blogData from "../../data/blogData";
 import BlogCard from "../components/BlogCard";
 import { useState } from "react";
 const BlogPage = () => {
-    const [selectedPost, setSelectedPost] = useState(null);
+  const [selectedPost, setSelectedPost] = useState(null);
 
-    const handleReadMore = (post) => {
-        setSelectedPost(post);
-    }
+  const handleReadMore = (post) => {
+    setSelectedPost(post);
+  }
 
-    const closeModal = () => {
-        setSelectedPost(null);
-    }
+  const closeModal = () => {
+    setSelectedPost(null);
+  }
 
 
   return (
-    <section className="px-12 py-6 bg-gray-50 min-h-screen relative">
-        <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-green-800 mb-10">
-                Latest From our Blog
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogData.map((blog)=>(
-                <BlogCard 
-                key={blog.id}
-                title={blog.title}
-                body={blog.body}
-                image={blog.image}
-                onReadMore={()=>handleReadMore(blog)}
-                />
+    <section className="bg-gradient-to-br from-green-50 to-white py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold  text-center text-green-800 mb-10">
+          Latest From our Blog
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {blogData.map((blog) => (
+            <BlogCard
+              key={blog.id}
+              title={blog.title}
+              body={blog.body}
+              image={blog.image}
+              onReadMore={() => handleReadMore(blog)}
+            />
 
-            ))}
-            </div>
+          ))}
         </div>
+      </div>
 
-        {selectedPost && (
+      {selectedPost && (
         <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
           <div className="bg-white max-w-2xl w-full rounded-xl shadow-xl p-6 relative animate-fade-in">
             <button
